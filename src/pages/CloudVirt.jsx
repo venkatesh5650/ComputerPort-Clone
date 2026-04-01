@@ -36,7 +36,7 @@ const CloudVirt = () => {
       <div className="page-hero">
         <div className="page-hero-gradient" />
         <div className="page-hero-content animate-slide-up">
-          <span className="page-badge glass">Cloud & Virtualization</span>
+          <span className="page-badge glass">Cloud & Virtualisation</span>
           <h1>Modern Infrastructure <br /><span className="text-gradient">Without Vendor Lock-in</span></h1>
           <p>
             Computer Port helps businesses simplify IT operations, strengthen resilience, and scale

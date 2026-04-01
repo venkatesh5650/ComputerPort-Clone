@@ -4,7 +4,7 @@ import './Navigation.css';
 
 const navLinks = [
   { to: '/', label: 'Home', end: true },
-  { to: '/cloud', label: 'Cloud & Virt' },
+  { to: '/cloud', label: 'Cloud & Virtualisation' },
   { to: '/security', label: 'Security' },
   { to: '/partners', label: 'Partners' },
 ];
