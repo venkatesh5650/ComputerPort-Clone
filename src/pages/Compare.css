@@ -1,0 +1,138 @@
+.compare-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.compare-tab-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.compare-tab-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.compare-tab-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+  .vs-label {
+    margin: 1rem 0;
+  }
+}
+
+.compare-column {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.proxmox-col {
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, transparent 100%);
+}
+
+.compare-col-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.vs-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-text-muted);
+  opacity: 0.3;
+}
+
+.compare-spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex-grow: 1;
+}
+
+.compare-spec-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-label-text {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.spec-value-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.spec-value-text.positive {
+  color: #10b981;
+}
+
+.spec-value-text.negative {
+  color: #ef4444;
+}
+
+.compare-verdict {
+  margin-top: auto;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.proxmox-verdict {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.competitor-verdict {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-muted);
+}

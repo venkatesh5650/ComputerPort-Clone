@@ -1,0 +1,176 @@
+.comparison-section {
+  padding: 8rem 2rem;
+  background-color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.comparison-dashboard {
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-tabs {
+  display: flex;
+  background: rgba(15, 23, 42, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 1rem 0;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+  color: white;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+.comparison-content {
+  padding: 2rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.competitor-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.competitor-card.proxmox-highlight {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.05);
+}
+
+.competitor-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.competitor-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.spec-list {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.spec-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1rem;
+}
+
+.spec-label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.spec-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.spec-value.positive { color: #10b981; }
+.spec-value.negative { color: #ef4444; }
+.spec-value.neutral { color: #f59e0b; }
+
+.verdict {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.verdict.gradient-bg {
+  background: linear-gradient(45deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+  color: #a7f3d0;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.verdict.dark-bg {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--color-text-muted);
+}
