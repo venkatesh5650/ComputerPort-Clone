@@ -4,23 +4,23 @@ import './AiAssistant.css';
 const AiAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { role: 'ai', text: 'Hello! Im your Port IT Consultant. Need help sizing a Proxmox cluster or setting up Zero-Trust?' }
+    { role: 'ai', text: 'Hello! Im your Computer Port IT Consultant. Need help sizing a Proxmox cluster or setting up Zero-Trust?' }
   ]);
   const [input, setInput] = useState('');
 
   const handleSend = (e) => {
     e.preventDefault();
     if (!input.trim()) return;
-    
+
     // Add user message
     const newMessages = [...messages, { role: 'user', text: input }];
     setMessages(newMessages);
     setInput('');
-    
+
     // Simulate AI response
     setTimeout(() => {
-      setMessages(prev => [...prev, { 
-        role: 'ai', 
+      setMessages(prev => [...prev, {
+        role: 'ai',
         text: 'Based on your request, I recommend reviewing our Hybrid Cloud solutions. Our engineering team can deploy a secure, highly-available cluster in 48 hours.'
       }]);
     }, 1000);
@@ -29,7 +29,7 @@ const AiAssistant = () => {
   return (
     <div className={`ai-assistant-wrapper ${isOpen ? 'open' : ''}`}>
       {!isOpen && (
-        <button 
+        <button
           className="ai-toggle-btn glass"
           onClick={() => setIsOpen(true)}
           aria-label="Open AI Assistant"
@@ -59,7 +59,7 @@ const AiAssistant = () => {
               ×
             </button>
           </div>
-          
+
           <div className="ai-chat-body">
             {messages.map((msg, index) => (
               <div key={index} className={`chat-message ${msg.role}`}>
@@ -67,11 +67,11 @@ const AiAssistant = () => {
               </div>
             ))}
           </div>
-          
+
           <form className="ai-chat-footer" onSubmit={handleSend}>
-            <input 
-              type="text" 
-              placeholder="Ask about IT solutions..." 
+            <input
+              type="text"
+              placeholder="Ask about IT solutions..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="ai-input"
